@@ -38,24 +38,24 @@
 //     console.error(err.message);
 //   }
 // }
-export async function getRecipeFromMistral(ingredientsArr) {
-  const res = await fetch("/.netlify/functions/get-recipe", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ ingredients: ingredientsArr }),
-  });
+// export async function getRecipeFromMistral(ingredientsArr) {
+//   const res = await fetch("/.netlify/functions/get-recipe", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ ingredients: ingredientsArr }),
+//   });
 
-  const data = await res.json();
+//   const data = await res.json();
 
-  if (res.ok) {
-    return data.recipe;
-  } else {
-    console.error(data.error);
-    return "Something went wrong.";
-  }
-}
+//   if (res.ok) {
+//     return data.recipe;
+//   } else {
+//     console.error(data.error);
+//     return "Something went wrong.";
+//   }
+// }
 
 export async function getRecipeFromMistral(ingredientsArr) {
   try {
