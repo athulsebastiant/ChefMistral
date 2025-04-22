@@ -86,7 +86,7 @@ export const handler = async (event) => {
   try {
     const { ingredients } = JSON.parse(event.body);
     const ingredientsString = ingredients.join(", ");
-
+    console.log("hi");
     const response = await fetch(
       "https://api.deepseek.com/v1/chat/completions",
       {
