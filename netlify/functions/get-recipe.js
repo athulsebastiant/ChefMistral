@@ -113,6 +113,7 @@ export const handler = async (event) => {
     );
 
     const data = await response.json();
+    console.log("API response:", data); // Debug log
     const reply = data.choices?.[0]?.message?.content || "No recipe found";
 
     return {
